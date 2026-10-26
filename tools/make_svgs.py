@@ -12,7 +12,11 @@ from fontTools.pens.transformPen import TransformPen
 FONTS, OUT = sys.argv[1], sys.argv[2]
 os.makedirs(OUT, exist_ok=True)
 
-BG, SURFACE, TEXT, MUTED, LABEL, HAIR, ACCENT, POS = "#111010", "#1a1918", "#edeae4", "#b9b4ac", "#8f8a82", "#edeae41f", "#7fa8ff", "#6fdc8c"
+# dark = the portfolio's .dk palette; light = its footer palette, transparent so it sits on GitHub's white page
+THEMES = {
+    "dark": dict(BG="#111010", TEXT="#edeae4", MUTED="#b9b4ac", LABEL="#8f8a82", HAIR="#edeae41f", ACCENT="#7fa8ff", POS="#6fdc8c", G=56),
+    "light": dict(BG=None, TEXT="#0c0c0c", MUTED="#6f6f6c", LABEL="#9c9c98", HAIR="#0c0c0c1f", ACCENT="#2f63d8", POS="#1f9d4d", G=2),
+}
 
 _cache = {}
 def font(file, **axes):
@@ -47,10 +51,12 @@ def width(f, s, size, tracking=0.0):
 
 def svg(w, h, body, title):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{title}">'
-            f'<title>{title}</title><rect width="{w}" height="{h}" rx="14" fill="{BG}"/>'
-            f'<rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="14" fill="none" stroke="{HAIR}"/>{body}</svg>')
+            f'<title>{title}</title>'
+            + (f'<rect width="{w}" height="{h}" rx="14" fill="{BG}"/>'
+               f'<rect x="0.5" y="0.5" width="{w-1}" height="{h-1}" rx="14" fill="none" stroke="{HAIR}"/>' if BG else "")
+            + f'{body}</svg>')
 
-W, G = 1200, 56  # width, gutter
+W = 1200
 
 def header():
     h = 440
@@ -67,8 +73,8 @@ def header():
     p, w1 = text(DISPLAY(), "PRABHAT\u2009\u2009—\u2009\u2009", G - 4, base, size, TEXT, -0.02); parts.append(p)
     p, _ = text(ITALIC(), "Acharya", G - 4 + w1 + gap * size, base, size, ACCENT, -0.03); parts.append(p)
     parts.append(f'<line x1="{G}" y1="356" x2="{W-G}" y2="356" stroke="{HAIR}"/>')
-    parts.append(f'<circle cx="{G+5}" cy="389" r="8" fill="{POS}" fill-opacity=".2"/><circle cx="{G+5}" cy="389" r="5" fill="{POS}"/>')
-    p, _ = text(MONO(), "OPEN TO OPPORTUNITIES", G + 24, 394, 15, MUTED); parts.append(p)
+    parts.append(f'<circle cx="{G+8}" cy="389" r="8" fill="{POS}" fill-opacity=".2"/><circle cx="{G+8}" cy="389" r="5" fill="{POS}"/>')
+    p, _ = text(MONO(), "OPEN TO OPPORTUNITIES", G + 27, 394, 15, MUTED); parts.append(p)
     r = "FULL STACK · DATABASES · AI/ML"
     p, _ = text(MONO(), r, W - G - width(MONO(), r, 15), 394, 15, MUTED); parts.append(p)
     return svg(W, h, "".join(parts), "Prabhat Acharya — Full stack, databases, AI/ML. Kathmandu, Nepal.")
@@ -81,10 +87,12 @@ def section(num, label, plain, italic, name):
     size = 84
     p, w1 = text(DISPLAY(), plain.upper(), G - 3, 140, size, TEXT, -0.02); parts.append(p)
     p, _ = text(ITALIC(), italic, G - 3 + w1 + (16 if plain else 0), 140, size, ACCENT, -0.03); parts.append(p)
-    open(os.path.join(OUT, name), "w").write(svg(W, h, "".join(parts), f"{plain} {italic}".strip()))
+    open(os.path.join(OUT, f"{name}-{THEME}.svg"), "w").write(svg(W, h, "".join(parts), f"{plain} {italic}".strip()))
 
-open(os.path.join(OUT, "header.svg"), "w").write(header())
-section("01", "Selected work", "Selected", "work", "work.svg")
-section("02", "Toolkit", "The", "toolkit", "toolkit.svg")
-section("03", "Contact / say hello", "Let's", "talk!", "contact.svg")
+for THEME, colours in THEMES.items():
+    globals().update(colours)
+    open(os.path.join(OUT, f"header-{THEME}.svg"), "w").write(header())
+    section("01", "Selected work", "Selected", "work", "work")
+    section("02", "Toolkit", "The", "toolkit", "toolkit")
+    section("03", "Contact / say hello", "Let's", "talk!", "contact")
 print("ok")
