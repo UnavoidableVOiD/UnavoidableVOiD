@@ -1,4 +1,4 @@
-<a href="https://prabhatacharya.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><img src="assets/header-light.svg" width="100%" alt="Prabhat — Acharya. Full stack, databases, AI/ML. Kathmandu, Nepal. Open to opportunities."></picture></a>
+<a href="https://prabhatacharya.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><img src="assets/header-light.svg" width="100%" alt="Prabhat — Acharya. Full stack, databases, AI/ML. Kathmandu, Nepal."></picture></a>
 
 IT engineering graduate working across the data stack: full stack web development (Laravel, Vue.js), production
 database administration (MySQL/Percona, replication, performance tuning) and AI/ML and RAG pipelines. I like turning

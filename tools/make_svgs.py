@@ -14,8 +14,8 @@ os.makedirs(OUT, exist_ok=True)
 
 # dark = the portfolio's .dk palette; light = its footer palette, transparent so it sits on GitHub's white page
 THEMES = {
-    "dark": dict(BG="#111010", TEXT="#edeae4", MUTED="#b9b4ac", LABEL="#8f8a82", HAIR="#edeae41f", ACCENT="#7fa8ff", POS="#6fdc8c", G=56),
-    "light": dict(BG=None, TEXT="#0c0c0c", MUTED="#6f6f6c", LABEL="#9c9c98", HAIR="#0c0c0c1f", ACCENT="#2f63d8", POS="#1f9d4d", G=2),
+    "dark": dict(BG="#111010", TEXT="#edeae4", MUTED="#b9b4ac", LABEL="#8f8a82", HAIR="#edeae41f", ACCENT="#7fa8ff", G=56),
+    "light": dict(BG=None, TEXT="#0c0c0c", MUTED="#6f6f6c", LABEL="#9c9c98", HAIR="#0c0c0c1f", ACCENT="#2f63d8", G=2),
 }
 
 _cache = {}
@@ -73,9 +73,8 @@ def header():
     p, w1 = text(DISPLAY(), "PRABHAT\u2009\u2009—\u2009\u2009", G - 4, base, size, TEXT, -0.02); parts.append(p)
     p, _ = text(ITALIC(), "Acharya", G - 4 + w1 + gap * size, base, size, ACCENT, -0.03); parts.append(p)
     parts.append(f'<line x1="{G}" y1="356" x2="{W-G}" y2="356" stroke="{HAIR}"/>')
-    parts.append(f'<circle cx="{G+8}" cy="389" r="8" fill="{POS}" fill-opacity=".2"/><circle cx="{G+8}" cy="389" r="5" fill="{POS}"/>')
-    p, _ = text(MONO(), "OPEN TO OPPORTUNITIES", G + 27, 394, 15, MUTED); parts.append(p)
-    r = "FULL STACK · DATABASES · AI/ML"
+    p, _ = text(MONO(), "FULL STACK · DATABASES · AI/ML", G, 394, 15, MUTED); parts.append(p)
+    r = "PRABHATACHARYA.VERCEL.APP"
     p, _ = text(MONO(), r, W - G - width(MONO(), r, 15), 394, 15, MUTED); parts.append(p)
     return svg(W, h, "".join(parts), "Prabhat Acharya — Full stack, databases, AI/ML. Kathmandu, Nepal.")
 
