@@ -4,7 +4,7 @@ IT engineering graduate working across the data stack: full stack web developmen
 database administration (MySQL/Percona, replication, performance tuning) and AI/ML and RAG pipelines. I like turning
 messy, unstructured data and legacy systems into reliable, well-documented software.
 
-Currently **Full Stack Developer Trainee at SOCIAIR**, Kathmandu.
+Currently working as a **Full Stack Developer Trainee** in Kathmandu.
 
 <br>
 
