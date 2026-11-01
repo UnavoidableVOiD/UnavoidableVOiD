@@ -138,12 +138,12 @@ def section(num, label, plain, italic, name):
     size = 72
     p, w1 = text(SERIF(), plain, G - 2, 120, size, TEXT, -0.01); parts.append(p)
     p, _ = text(ITALIC(), italic, G - 2 + w1 + (size * 0.22 if plain else 0), 120, size, ACCENT, -0.01); parts.append(p)
-    open(os.path.join(OUT, f"{name}-{THEME}.svg"), "w").write(svg(W, h, "".join(parts), f"{plain} {italic}".strip()))
+    open(os.path.join(OUT, f"lx-{name}-{THEME}.svg"), "w").write(svg(W, h, "".join(parts), f"{plain} {italic}".strip()))
 
 
 for THEME, colours in THEMES.items():
     globals().update(colours)
-    open(os.path.join(OUT, f"header-{THEME}.svg"), "w").write(header())
+    open(os.path.join(OUT, f"lx-header-{THEME}.svg"), "w").write(header())
     section("01", "Selected work", "Selected", "work.", "work")
     section("02", "Toolkit", "The", "toolkit.", "toolkit")
     section("03", "Contact / say hello", "Let's", "talk.", "contact")

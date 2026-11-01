@@ -1,4 +1,4 @@
-<a href="https://prabhatacharya.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg"><img src="assets/header-light.svg" width="100%" alt="Prabhat Acharya. DATA IS OMNIPOTENT. DATA IS OMNIPRESENT. Full-stack developer working with databases, data, AI, ML and RAG. Kathmandu, Nepal."></picture></a>
+<a href="https://prabhatacharya.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/lx-header-dark.svg"><img src="assets/lx-header-light.svg" width="100%" alt="Prabhat Acharya. DATA IS OMNIPOTENT. DATA IS OMNIPRESENT. Full-stack developer working with databases, data, AI, ML and RAG. Kathmandu, Nepal."></picture></a>
 
 IT engineering graduate working across the data stack: full stack web development (Laravel, Vue.js), production
 database administration (MySQL/Percona, replication, performance tuning) and AI/ML and RAG pipelines. I like turning
@@ -12,7 +12,7 @@ and the [Lab](https://prabhatacharya.vercel.app/lab.html) lets you play with the
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/work-dark.svg"><img src="assets/work-light.svg" width="100%" alt="(01) Selected work"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/lx-work-dark.svg"><img src="assets/lx-work-light.svg" width="100%" alt="(01) Selected work"></picture>
 
 | | Project | What it is | Stack |
 |---|---|---|---|
@@ -26,7 +26,7 @@ and the [Lab](https://prabhatacharya.vercel.app/lab.html) lets you play with the
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/toolkit-dark.svg"><img src="assets/toolkit-light.svg" width="100%" alt="(02) The toolkit"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/lx-toolkit-dark.svg"><img src="assets/lx-toolkit-light.svg" width="100%" alt="(02) The toolkit"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/Laravel-0d0e0d?style=for-the-badge&logo=laravel&logoColor=9fbf98"><img alt="Laravel" src="https://img.shields.io/badge/Laravel-efede6?style=for-the-badge&logo=laravel&logoColor=3f6b45"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/Vue.js-0d0e0d?style=for-the-badge&logo=vuedotjs&logoColor=9fbf98"><img alt="Vue.js" src="https://img.shields.io/badge/Vue.js-efede6?style=for-the-badge&logo=vuedotjs&logoColor=3f6b45"></picture>
@@ -45,7 +45,7 @@ and the [Lab](https://prabhatacharya.vercel.app/lab.html) lets you play with the
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/contact-dark.svg"><img src="assets/contact-light.svg" width="100%" alt="(03) Let's talk."></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/lx-contact-dark.svg"><img src="assets/lx-contact-light.svg" width="100%" alt="(03) Let's talk."></picture>
 
 Ask me about a role, a project or a collaboration, or just say hello.
 
