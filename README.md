@@ -16,7 +16,7 @@ and the [Lab](https://prabhat-acharya.com.np/lab.html) lets you play with them.
 
 | | Project | What it is | Stack |
 |---|---|---|---|
-| 01 | [**The Spirit Atlas**](https://atlas.prabhat-acharya.com.np) | How the world's drinks are made, from grain to glass, with every claim cited. [Case study →](https://prabhat-acharya.com.np/spirit-atlas.html) | React · Vite · R3F · d3-geo |
+| 01 | [**The Libation Atlas**](https://atlas.prabhat-acharya.com.np) | How the world's drinks are made, from grain to glass, with every claim cited. [Case study →](https://prabhat-acharya.com.np/libation-atlas.html) | React · Vite · R3F · d3-geo |
 | 02 | [**MediScan**](https://github.com/UnavoidableVOiD/MediScan) | Lab report in, plain-language risk out. Team project: I led the AI/ML system (OCR, safety layer, six risk models, RAG). [Case study →](https://prabhat-acharya.com.np/mediscan.html) | Python · scikit-learn · XGBoost · LangChain · FastAPI · Django · React |
 | 03 | [**Netflix Data Science Pipeline**](https://github.com/UnavoidableVOiD/netflix-data-science-pipeline) | Raw CSV to a dashboard that runs its classifier in the browser, no server. [Case study →](https://prabhat-acharya.com.np/netflix.html) | Python · scikit-learn · Plotly · Vue 3 |
 | 04 | [**Mahabharata Quiz**](https://mahabharata-quiz.vercel.app) | A learning study: z-scores, Pearson correlation and a 20,000-play Monte Carlo balance check, as a personality quiz. | JavaScript · React · R3F |
